@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class T {
+public class T2 {
 
 	public static void main(String[] args) throws Exception{
 		PrintStream p = System.out;
-		File root = new File("C:\\FER\\Documents\\Java_workspace\\AVSP_Labosi\\lab4A_primjeri\\");
+		File root = new File("C:\\FER\\Documents\\Java_workspace\\AVSP_Labosi\\lab4B_primjeri\\");
 		List<String> list = new LinkedList<>();
 		for(String path : root.list()){
 			list.add(path);
@@ -21,16 +21,16 @@ public class T {
 		System.out.println(list);
 		boolean marker = false;
 		for(int i = 0; i < list.size(); i++){
-			System.setIn(new FileInputStream(new File("C:\\FER\\Documents\\Java_workspace\\AVSP_Labosi\\lab4A_primjeri\\"+list.get(i)+"\\R.in")));
+			System.setIn(new FileInputStream(new File("C:\\FER\\Documents\\Java_workspace\\AVSP_Labosi\\lab4B_primjeri\\"+list.get(i)+"\\R.in")));
 			System.setOut(new PrintStream(new File("C:\\FER\\out.txt")));
-			NodeRank.main(null);
+			ClosestBlackNode.main(null);
 			System.setOut(p);
 			BufferedReader output = new BufferedReader
 				(new InputStreamReader(new FileInputStream(new File("C:\\FER\\out.txt"))));
 			BufferedReader correct = new BufferedReader
-					(new InputStreamReader(new FileInputStream(new File("C:\\FER\\Documents\\Java_workspace\\AVSP_Labosi\\lab4A_primjeri\\"+list.get(i)+"\\R.out"))));
+					(new InputStreamReader(new FileInputStream(new File("C:\\FER\\Documents\\Java_workspace\\AVSP_Labosi\\lab4B_primjeri\\"+list.get(i)+"\\R.out"))));
 			String line;
-			int cnt = 0;
+			int cnt = 1;
 			while((line = output.readLine()) != null){
 				if(!line.equals(correct.readLine())){
 					System.out.println(list.get(i) + "  " + cnt);
