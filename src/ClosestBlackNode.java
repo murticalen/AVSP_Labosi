@@ -1,21 +1,13 @@
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Queue;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.IntStream;
-
-import javax.jws.Oneway;
 
 public class ClosestBlackNode {
 	
@@ -23,7 +15,7 @@ public class ClosestBlackNode {
 	
 	public static void main(String[] args) throws Exception{
 		//System.setIn(new FileInputStream(new File("C:\\FER\\Documents\\Java_workspace\\AVSP_Labosi\\lab4B_primjeri\\stest2\\R.in")));
-		System.setOut(new PrintStream(new File("C:\\FER\\out.txt")));
+		//System.setOut(new PrintStream(new File("C:\\FER\\out.txt")));
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String line = reader.readLine();
 		int n = Integer.parseInt(line.split(" ")[0]);
